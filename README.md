@@ -85,7 +85,7 @@ The `InstructionMemory.v` file in each pipeline implementation contains an assem
 
 The CPI will be calculated by checking the number of cycles that the program runs for in the terminal, and will be compared to the ideal CPI.
 
-The ideal CPI shall be calculated using the formula: $ n + k - 1 \over k $, where n is the number of instructions in the program and k is the number of stages in the pipeline.
+The ideal CPI shall be calculated using the formula: $n + k - 1 \over k$, where n is the number of instructions in the program and k is the number of stages in the pipeline.
 
 ### 2-Stage
 
