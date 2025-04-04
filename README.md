@@ -1,6 +1,12 @@
 
 # 2, 3 and 4-Stage Pipeline Architecture
 
+## Contributors
+
+Arnav Gupta (23114010), Krish Singla (23114050), Megh Bhavesh Shah (23114065), Tanay Kapadia (23323044), Vaghasiya Jay (23114104)
+
+Made as a course project for CSC-201 (Computer Organization & Architecture), IITR
+
 ## Objectives
 
 - Designing and implementing a simple processor
@@ -98,9 +104,3 @@ Using the formula, we get a CPI of 1.11, while for the following program, we get
 ### 4-Stage
 
 Using the formula, we get a CPI of 1.17, while for the following program, we get 2.06.
-
-## Contributors
-
-Arnav Gupta (23114010), Krish Singla (23114050), Megh Bhavesh Shah (23114065), Tanay Kapadia (23323044), Vaghasiya Jay (23114104)
-
-Made as a course project for CSC-201 (Computer Organization & Architecture), IITR
