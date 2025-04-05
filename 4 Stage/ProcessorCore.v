@@ -65,7 +65,7 @@ module ProcessorCore (
     output wire [1:0] stallC,
     output wire track
 );
-    // Instantiate FetchUnit
+    // Instruction Fetch Unit
     FetchUnit fuu(
         .clk(clk),
         .reset(reset),
@@ -83,6 +83,7 @@ module ProcessorCore (
         .instruction(instructionF)
     );
 
+    // Hazard Handling Unit
     Hazard hz(
         .clk(clk),
         .reset(reset),
@@ -96,6 +97,7 @@ module ProcessorCore (
         .track(track)
     );
 
+    // Latch 1
     Latch_FetchDecode lfd(
         .clk(clk),
         .reset(reset),
@@ -106,7 +108,7 @@ module ProcessorCore (
         .stall(stall)
     );
 
-    
+    // Operand Fetch Unit
     OperandFetchUnit ofu(
         .clk(clk),
         .reset(reset),
@@ -141,7 +143,7 @@ module ProcessorCore (
         .rs2(rs2D)
     );
 
-
+    // Latch 2
     Latch_DecodeExecute lfe(
         .clk(clk),
         .reset(reset),
@@ -207,6 +209,7 @@ module ProcessorCore (
         .stallC(stallC)
     );
 
+    // Execution Unit
     ExecuteUnit euu(
         .clk(clk),
         .op1(op1E),               // First operand (from Operand Fetch)
@@ -242,6 +245,7 @@ module ProcessorCore (
         .aluResult(aluResultE)          // Result of the ALU operation
     );
 
+    // Latch 3
     Latch_ExecuteMemory lem(
         .clk(clk),
         .reset(reset),
@@ -302,7 +306,7 @@ module ProcessorCore (
         .stall(stall)
     );
 
-
+    // Memory Unit
     MemoryUnit muu(
         .clk(clk),
         .isLd(isLdM),
@@ -312,6 +316,7 @@ module ProcessorCore (
         .ldResult(ldResultM)
     );
 
+    // Register file
     RegisterFile rf(
         .clk(clk),
         .reset(reset),
